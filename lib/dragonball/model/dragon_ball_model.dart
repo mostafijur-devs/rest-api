@@ -76,8 +76,8 @@ class Meta {
   int totalItems;
   int itemCount;
   int itemsPerPage;
-  int currentPage;
   int totalPages;
+  int currentPage;
 
   Meta({
     required this.totalItems,
@@ -93,7 +93,7 @@ class Meta {
       itemCount: json['itemCount'],
       itemsPerPage: json['itemsPerPage'],
       currentPage: json['currentPage'],
-      totalPages: json['totalPage'],
+      totalPages: json['totalPages'],
     );
   }
 
