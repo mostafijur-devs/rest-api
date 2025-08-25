@@ -37,7 +37,6 @@ class _DragonBallCharacterSacreenState
     final url = 'https://dragonball-api.com/api/characters';
     try {
       final response = await http.get(Uri.parse(url));
-
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
         dragonBallModel = DragonBallModel.fromJson(data);
