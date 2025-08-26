@@ -1,17 +1,18 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import '../models/google_book_response.dart';
 
-import '../models/animals_response_model.dart';
 
 class AnimalView extends StatelessWidget {
-   AnimalView({super.key,required this.volumeInfo});
-  VolumeInfo? volumeInfo;
+   AnimalView({super.key, this.volumeInfo ,this.googleBookResponse} );
+   GoogleBookResponse? googleBookResponse;
+   VolumeInfo? volumeInfo;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(volumeInfo?.title.toString()??'Animal name not found'),
+        title: Text(volumeInfo!.title.toString()??'Animal name not found'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
